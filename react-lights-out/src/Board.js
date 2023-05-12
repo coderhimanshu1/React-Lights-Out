@@ -81,7 +81,7 @@ function Board({ nrows = 6, ncols = 6, chanceLightStartsOn = 0.5 }) {
   }
 
   // make table board
-  let tblBoard = [];
+  let displayBoard = [];
 
   for (let y = 0; y < nrows; y++) {
     let row = [];
@@ -95,12 +95,12 @@ function Board({ nrows = 6, ncols = 6, chanceLightStartsOn = 0.5 }) {
         />
       );
     }
-    tblBoard.push(<tr key={y}>{row}</tr>);
+    displayBoard.push(<tr key={y}>{row}</tr>);
   }
 
   return (
     <table className="Board">
-      <tbody>{tblBoard}</tbody>
+      <tbody>{displayBoard}</tbody>
     </table>
   );
 }
